@@ -26,7 +26,5 @@ def get_infos():
     parsed = json.loads(dict)
     return parsed
 
-
-
 if __name__ == "__main__":
     app.run(debug=True)
