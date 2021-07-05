@@ -12,7 +12,7 @@ This app is a dashboard that runs an analysis on any client from the Home Credit
 | setup.sh | Contains some config infos for Heroku (necessary for Streamlit on Heroku) |
 
 ## Deployed App
-Click here to get to the deployed [Dashboard](https://https://dashboard-credit-risk.herokuapp.com/)
+Click here to get to the deployed [Dashboard](https://dashboard-credit-risk.herokuapp.com/)
 
 This app was created using python and the open-source app framework, streamlit. It relies on [Home Credit Default Risk](https://www.kaggle.com/c/home-credit-default-risk/overview) data.
 
