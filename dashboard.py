@@ -112,10 +112,12 @@ def plot_histogram_grouped(col,group,reversed=False,yr=False):
     col_list = ['b']*n_categs
     if isinstance(cat_cli, str):
         idx=list_categs.index(cat_cli)
-        col_list[idx] = NEUTRAL_COLOR
+        #col_list[idx] = NEUTRAL_COLOR
         if val_cli > df_g[cat_cli] : BAR_COLOR = neg_color
         else : BAR_COLOR = pos_color
-    else :st.write("Ce client n'a pas de catégorie connue ")
+    else :
+        st.write("Ce client n'a pas de catégorie connue ")
+        col_list[idx] = NEUTRAL_COLOR
     # Affichage graphique
     fig, p = plt.subplots(figsize=(4,3))
     p = df_g.plot.bar(color=col_list)
