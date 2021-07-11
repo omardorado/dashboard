@@ -48,7 +48,7 @@ def show_gauge(val,thresh):
              'bar': {'color': state_color},
              'steps' : [
                  {'range': [0, 7.25], 'color': "lightgray"},
-                 {'range': [7.25, 33.25], 'color': "gray"}],
+                 {'range': [7.25, 16.5], 'color': "gray"}],
              'threshold' : {'line': {'color': NEUTRAL_COLOR, 'width': 4}, 'thickness': 0.75, 'value': thresh}}))
     # Configuration d'affichage
     fig.update_layout(
