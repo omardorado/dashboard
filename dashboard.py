@@ -13,12 +13,12 @@ sns.set_theme()
 #---------------------------------
 # Chargement des données et du modèle
 MODEL_PATH = 'model/my_model.sav'
-DATA_PATH = 'data/df_full.csv'
+DATA_PATH = 'data/df_full.zip'
 
 # Fonction de chargement
 @st.cache(allow_output_mutation=True)
 def load_data():
-    df = pd.read_csv(DATA_PATH,).sort_values(['SK_ID_CURR']).iloc[: , 1:]
+    df = pd.read_csv(DATA_PATH, compression='zip').sort_values(['SK_ID_CURR']).iloc[: , 1:]
     model = pickle.load(open(MODEL_PATH, 'rb'))
     return df, model
 
