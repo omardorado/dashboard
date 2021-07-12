@@ -180,7 +180,7 @@ REV_DICT_COL = dict(zip(COLS_CAT+COLS_VAL,NICE_COLS_CAT+NICE_COLS_VAL))
 DICT_GENDER = {0:'Homme',1:'Femme'}
 FEATS = [f for f in df.columns if f not in (COLS_CAT+['TARGET','SK_ID_CURR','SK_ID_BUREAU','SK_ID_PREV','index'])]
 SK_ID = df['SK_ID_CURR'].iloc[0]
-tresh = 33
+tresh = 16
 #---------------
 # MAIN
 # Barre de configuration latérale
@@ -188,7 +188,7 @@ tresh = 33
 st.sidebar.write('Identifiant')
 SK_ID = st.sidebar.number_input('SK_ID:',value=SK_ID)
 # Sélecion Seuil
-tresh = st.sidebar.slider('risque accepté',0,100,33)
+tresh = st.sidebar.slider('risque accepté',0,100,16)
 # Sélection autres annuités
 st.sidebar.write('Options sur les annuités')
 active_credit = st.sidebar.checkbox("Inclure les autre crédits connus")
