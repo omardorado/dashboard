@@ -219,7 +219,7 @@ if SK_ID in df['SK_ID_CURR'].values:
     # Prédiction du score
     score = model.predict_proba(client_df[FEATS])[:,1][0]
     # Affichage
-    row0_1, row0_2, row0_3 = st.beta_columns((4,4,4))
+    row0_1, row0_2, row0_3 = st.columns((4,4,4))
     with row0_1: # Infos générales
         display_string(DICT_GENDER[client_df['CODE_GENDER'].values[0]],'Genre')
         display_string(client_df['NAME_FAMILY_STATUS'].values[0],'Statut familial')
@@ -234,11 +234,11 @@ if SK_ID in df['SK_ID_CURR'].values:
     with row0_3: # Illustration risque de défaut
         show_gauge(score*100,tresh)
 
-    row1_1, row1_2= st.beta_columns((5,7)) # Titres des sections suivantes
+    row1_1, row1_2= st.columns((5,7)) # Titres des sections suivantes
     with row1_1: st.markdown(f"<h3 style='text-align: center;'>{'Poids des annuités sur le revenu'}</h3>", unsafe_allow_html=True)
     with row1_2: st.markdown(f"<h3 style='text-align: center;'>{'Comparaison par catégorie'}</h3>", unsafe_allow_html=True)
 
-    row2_1, row2_2,row2_3 = st.beta_columns((5,2,5))
+    row2_1, row2_2,row2_3 = st.columns((5,2,5))
     with row2_2: # comparaison annuités/revenus
         display_value(client_df[col_val],REV_DICT_COL[col_val],yr)
         display_string(client_df[col_cat].values[0],REV_DICT_COL[col_cat])
